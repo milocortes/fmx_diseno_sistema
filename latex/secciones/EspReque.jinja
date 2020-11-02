@@ -1,0 +1,353 @@
+
+\section{Alcances del Sistema}
+En términos generales el sistema está dirigido a permitir la consulta en las etapas de formulación y expedición así como  apoyar la etapa de ejecución con la automatización de reportes y  la de evaluación al proveer un mecanismo de monitoreo y visualización de indicadores de desempeño.
+\\
+\\
+\subsection{Objetivos Generales del Sistema}
+
+Los Objetivos del Negocio del proyecto del Sistema de gestión del POETY son:
+\begin{itemize}
+\item Proporcionar un mecanismo de conocimiento y soporte geográfico de decisiones para la gestión del POETY(QUÉ).
+\item Desarrollando un Sistema que permita la gestión del POETY mediante la organización dinámica de información relevante, la simplificación de informes técnicos, al definirse como base para configuración de la bitácora ambiental, así como geovisualizaciones que faciliten los procesos multi-escalares, multitemporales y multi-sectoriales de la transformación territorial y la vulnerabilidad de los ecosistemas al cambio climático. (CÓMO)
+\item Para que las autoridades así como otros actores de la vida pública cuenten con un mecanismo que funcione como un sistema de información geográfica para la puesta en marcha de la actualización del POETY, para el manejo, análisis y visualización de información que facilite la gobernanza colaborativa en el proceso de ordenamiento ecológico en la entidad y su articulación con otros instrumentos de planeación pertinentes.(POR QUÉ)
+\end{itemize}
+
+\pagebreak
+\subsection{Requerimientos del Sistema}
+
+
+\begingroup
+\renewcommand\arraystretch{1.3}
+\begin{longtable}{@{\extracolsep{2pt}}l p{7cm} p{5cm}}
+\caption{Requerimientos del Sistema}\label{item:req_sistema}\\
+\endhead
+\hline \\[-1.8ex]
+ \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Num}}}& \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Requerimiento}}} & \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{Descripción}}}\\
+\hline
+\\
+1 & Acceso interactivo a bancos de datos de la caracterización ambiental y socio-económica & \\
+\\
+2 & Monitoreo y evaluación pública a través de índices e indicadores del desempeño del ordenamiento ecológico & \\
+\\
+3 & Consulta interactiva de mecanismos de resolución de conflictos del programa de ordenamiento ecológico con base en los criterios, estrategias y lineamientos de regulación ecológico en cada UGA & \\
+\\
+4 & Simplificar la consulta de informes técnicos & \\
+\\
+5 & Permitir la realización de procedimientos de geovisualización que incluyan como mínimo manejo de bancos de datos, manejo de modelos de análisis, generador de reportes gráficos y tabulares e interfaces de operación & \\
+\\
+\hline \\[-1.8ex]
+  \\
+\end{longtable}
+\endgroup
+
+\subsection{Beneficios}
+
+El sistema permitirá: a) organizar de manera dinámica toda la información relevante del POETY; b) simplificar la consulta de informes técnicos; c) dar elementos de sustento en los procedimientos administrativos para la emisión de permisos, licencias y autorizaciones; d) facilitar la gobernanza colaborativa del ordenamiento ecológico; e) servir de base para la configuración de la bitácora ambiental del POETY; f) permitir la realización de procedimientos de geovisualización que incluyan como mínimo manejo de bancos de datos, manejo de modelos de análisis, generador de reportes gráficos y tabulares e interfaces de operación; y g) facilitar la exploración y geovisualización de los procesos multi-escalares, multitemporales y multi-sectoriales de la transformación territorial y la vulnerabilidad de los ecosistemas al cambio climático.
+\\
+\\
+Adicionalmente el sistema integrará la capacidad de agregar nuevos ordenamientos, por ejemplo ordenamientos locales (POELs) o costero (POETCY), dando así la capacidad a la Secretaría de Desarrollo Sustentable del Gobierno del Estado de Yucatán (SDS) de agregar en un mismo instrumento de consulta y gestión los distintos ordenamientos del territorio. Un beneficio directo de este esquema será que al consultar los criterios de regulación que aplican a un polígono particular, el sistema responderá con información de todos los ordenamientos que apliquen a la zona, es decir si el polígono en cuestión intersecta con Unidades de gestión ambiental (UGAs) estatales y/o municipales y/o costeras, en una sola consulta, se obtendrán todos los criterios de regulación que apliquen en los distintos niveles. Esta capacidad se implementará de modo tal que además de servir como insumo de la bitácora de ordenamientos se pueda utilizar como servicio independiente en otros flujos de trabajo de la SDS.
+
+
+\subsection{Limitaciones del sistema}
+
+Si bien el sistema incluye la capacidad de agregar nuevos ordenamientos como por ejemplo ordenamientos locales (POELs) o costero (POETCY), será labor de la SDS asegurarse que las consultoras encargadas de realizar estos ordenamientos, cumplan con los lineamientos necesarios para ser compatibles con el sistema.
+
+\section{Especificación de Requerimientos funcionales}
+En esta sección se exponen y describen las capacidades específicas del sistema y de los usuarios, así como los procesos involucrados en las consultas, actualizaciones y descargas hechas por los diferentes tipos de usuarios al sistema. Además, se agregan esquemas que describen las capacidades de los distintos usuarios a través de los casos de uso y los diagramas de actividad
+\\
+\\
+
+\subsection{Priorización de Requerimientos}
+
+\newgeometry{hmargin=.4in,vmargin=0.1in}
+
+\uselandscape
+\begin{figure}[h]
+
+\centering
+\caption{Priorización de requerimientos}\label{fig:priorReq}
+\includegraphics[width=1\textwidth, height=.5\textwidth]{images/PrioritizationRequirements}
+\end{figure}
+\useportrait
+
+\restoregeometry
+
+\uselandscape
+\subsection{Diagrama de Casos de Uso}
+
+\begin{figure}[h]
+
+\centering
+\includegraphics[width=1\textwidth, height=.39\textwidth]{images/AdminiInsumos}
+\caption{Diagrama de Administración de Recursos}\label{fig:consumorec_cu_diag}
+
+\end{figure}
+\useportrait
+
+\uselandscape
+
+\begin{figure}[h]
+
+\centering
+\includegraphics[width=1\textwidth, height=.43\textwidth]{images/ConsumoRecursosPropuesta}
+\caption{Diagrama de Consumo de Recursos}\label{fig:consumorec_cu_diag_prop}
+
+\end{figure}
+\useportrait
+\restoregeometry
+
+
+
+\subsection{Descripción de Módulos y Casos de Uso}
+
+
+\begingroup
+\renewcommand\arraystretch{1}
+\begin{longtable}{p{4cm} p{7cm} p{.5cm} p{.5cm} p{.5cm}}
+\caption{Módulos y Casos de Uso}\label{item:mod_cu}\\
+\\[-1.8ex]\hline
+\endhead
+ && \multicolumn{3}{c}{\textcolor{myotroazul}{\textbf{Permiso}}}\\
+ \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Módulo}}} & {\textcolor{myotroazul}{\textbf{Casos de Uso}}}& {\textcolor{myotroazul}{\textbf{UI}}$^a$} & {\textcolor{myotroazul}{\textbf{UE}}$^b$} & {\textcolor{myotroazul}{\textbf{A}}$^c$} \\
+\hline \\[-1ex]
+
+& Consultar fichas de UGAs & \cellcolor{myotroazul}& \cellcolor{myotroazul} & \cellcolor{myotroazul} \\
+
+ & Descargar ficha de UGA & \cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} \\
+
+ & Consultar capas de insumo para el ordenamiento &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} \\
+
+ & Consultar mapas de aptitud &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} \\
+
+ & Descargar capas &\cellcolor{myotroazul} &\cellcolor{myotroazul} & \cellcolor{myotroazul}\\
+
+ & Consultar mapas de UGAs & \cellcolor{myotroazul}&\cellcolor{myotroazul} & \cellcolor{myotroazul}\\
+
+& Consultar documentos relacionados con la formulación del (POETY, POETCY, o POEL) &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} \\
+
+Consultas y descargas & Consultar documentos del (POETY, POETCY, o POEL) por búsqueda & \cellcolor{myotroazul}&\cellcolor{myotroazul} &\cellcolor{myotroazul} \\
+
+ & Consultar documentos del (POETY, POETCY, o POEL) por orden cronológico & \cellcolor{myotroazul}&\cellcolor{myotroazul} &\cellcolor{myotroazul} \\
+
+ & Consultar documentos del (POETY, POETCY, o POEL) por tipo &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} \\
+
+ & Descargar documento &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} \\
+
+ & Consultar criterios de regulación por polígono &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} \\
+
+ & Descargar criterios de regulación por polígono &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} \\
+
+ & Descargar criterios de regulación por UGA & \cellcolor{myotroazul}&\cellcolor{myotroazul} &\cellcolor{myotroazul} \\
+
+ & Consultar indicadores del (POETY, POETCY, o POEL) &\cellcolor{myotroazul} &\cellcolor{myotroazul} & \cellcolor{myotroazul}  \\
+\hline
+
+ & Dar de alta documentos (fichas, u otros) &\cellcolor{myotroazul}  & &\cellcolor{myotroazul} \\
+
+ & Dar de alta capas & \cellcolor{myotroazul} & &\cellcolor{myotroazul} \\
+
+ & Actualizar documentos (fichas, u otros) &\cellcolor{myotroazul}  & &\cellcolor{myotroazul} \\
+
+& Actualizar capas &\cellcolor{myotroazul} & & \cellcolor{myotroazul}\\
+
+Actualización de recursos & Borrar documentos (fichas, u otros) &\cellcolor{myotroazul} & &\cellcolor{myotroazul} \\
+
+ & Borrar capas &\cellcolor{myotroazul} & & \cellcolor{myotroazul}\\
+
+ & Dar de alta recursos de monitoreo &\cellcolor{myotroazul} & &\cellcolor{myotroazul} \\
+
+ & Actualizar recursos de monitoreo &\cellcolor{myotroazul} & & \cellcolor{myotroazul}\\
+
+ & Borrar recursos de monitoreo &\cellcolor{myotroazul} & & \cellcolor{myotroazul}\\
+\hline
+ &
+Obtener un informe sobre los criterios de regulación y los impactos acumulados & \cellcolor{myotroazul}& & \cellcolor{myotroazul}\\
+
+Automatización de reportes & Dar de alta dictamen de un proyecto &\cellcolor{myotroazul} & & \cellcolor{myotroazul} \\
+
+  & Modificar los datos de un proyecto & \cellcolor{myotroazul}& &  \cellcolor{myotroazul}\\
+
+ & Borrar proyectos en la base de datos de proyectos &\cellcolor{myotroazul} & & \cellcolor{myotroazul}\\
+\hline
+ & Dar de alta usuario interno de SDS & & &  \cellcolor{myotroazul}\\
+
+ & Dar de baja usuario interno de SDS  &  & & \cellcolor{myotroazul}\\
+
+ & Modificar datos de usuarios internos de SDS & & & \cellcolor{myotroazul}\\
+
+Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
+
+ & Autenticar usuario & & & \cellcolor{myotroazul}\\
+
+ & Dar de alta un ordenamiento & & & \cellcolor{myotroazul}\\
+
+ & Borrar un ordenamiento & & & \cellcolor{myotroazul}\\
+
+ & Modificar datos generales de un ordenamiento & & & \cellcolor{myotroazul}\\
+\hline
+\multicolumn{5}{l}{\small{$^a$ Usuario Interno, $^b$ Usuario Externo, $^c$ Administrador}}\\
+
+  \\
+\end{longtable}
+\endgroup
+\pagebreak
+\subsection{Casos de Uso}
+
+
+{% for caso in casos_uso %}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% CU: {{caso.nombre}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begingroup
+\renewcommand\arraystretch{1.3}
+\begin{longtable}{@{\extracolsep{8pt}}l p{8.5cm}}
+\caption{Caso de uso: {{caso.nombre}} }\label{item: {{caso.label}} }\\
+\\[-1.8ex]
+\hline
+  \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
+\hline \\[-1ex]
+\hspace{.2cm}Caso de uso (CU) & {{caso.nombre}} \\ \\
+\hspace{.2cm}Id del CU &  {{caso.id}} \\ \\
+\hspace{.2cm}Actores participantes & {% for line in caso.actores %}
+\par {{line}}
+{% endfor %}
+\\
+\hspace{.2cm}Breve descripción & {{caso.descripcion}} \\ \\
+
+\hspace{.2cm}Pre-condiciones & \textbf{Del proceso}: \par\vspace{.1cm} {{caso.pre_proceso}}
+ \par\vspace{.2cm} \textbf{Del sistema} \par\vspace{.1cm} {{caso.pre_sistema}} \\ \\
+
+\hspace{.2cm}Flujo principal &
+{% for line in caso.flujo_lines %}
+ {{line}} \par\vspace{.1cm}
+{% endfor %}
+\\
+
+\hspace{.2cm}Flujos alternos & {% for line in caso.flujos_alternos %}
+\par {{line}}
+{% endfor %}
+
+
+\\
+
+\hspace{.2cm}Flujos de excepción & {% for line in caso.flujos_excepcion %}
+\par\vspace{.1cm} {{line}}
+{% endfor %}
+
+\\%%%<---- Este salto de linea faltaba
+
+\hspace{.2cm}Post-condiciones & {{post_condiciones}}
+\\
+\hline
+
+ \\
+\end{longtable}
+\endgroup
+
+
+\pagebreak
+{% endfor %}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%% DIAGRAMAS DE ACTIVIDAD  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagebreak
+\useportrait
+
+\uselandscape
+\subsection{Diagramas de actividad}
+
+
+%%%%%%%%%%%%%%%% Consultar-descargar criterios de regulación por polígono
+\begin{figure}[h]
+\centering
+\caption{Diagrama de actividad \textbf{Consultar-descargar criterios de regulación por polígono}}\label{fig:priorReq}
+\includegraphics[width=0.8\textwidth, height=.37\textwidth]{images/diag_act_consultardescargar_critreg_poligono}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%% Consultar-descargar recursos por UGAs
+\pagebreak
+\begin{figure}[h]
+\centering
+\caption{Diagrama de actividad \textbf{Consultar-descargar recursos por UGAs}}\label{fig:priorReq}
+\includegraphics[width=0.8\textwidth, height=.5\textwidth]{images/diag_act_consultardescargar_UGAs}
+\end{figure}
+
+%%%%%%%%%%%%%%% Consultar-descargar documentos relacionados con la formulación de ordenamiento
+\pagebreak
+\begin{figure}[h]
+\centering
+\caption{Diagrama de actividad \textbf{Consultar-descargar documentos relacionados con la formulación de ordenamiento}}\label{fig:priorReq}
+\includegraphics[width=0.8\textwidth, height=.6\textwidth]{images/diag_act_consultardescargar_doc_relac_form}
+\end{figure}
+
+
+%%%%%%%%%%%%%%% Consultar-descargar capas de insumo para el ordenamiento
+\pagebreak
+\begin{figure}[h]
+\centering
+\caption{Diagrama de actividad \textbf{Consultar-descargar capas de insumo para el ordenamiento}}\label{fig:priorReq}
+\includegraphics[width=0.8\textwidth, height=.5\textwidth]{images/dic_act_consultardescargar_capas_insumo_ordenamiento}
+\end{figure}
+
+\useportrait
+\restoregeometry
+
+
+%%%%%%%%%%%%%%%%%% Dar de Alta recurso
+\pagebreak
+\begin{figure}[h]
+\centering
+\caption{Diagrama de actividad \textbf{Dar de Alta recurso}}
+\label{fig:priorReq}
+\includegraphics[width=1\textwidth, height=1.5\textwidth]{images/diag_act_alta_recurso}
+\end{figure}
+
+%%%%%%%%%%%%%%%%% Actualizar recurso
+\pagebreak
+\begin{figure}[h]
+\centering
+\caption{Diagrama de actividad \textbf{Actualizar recurso}}\label{fig:priorReq}
+\includegraphics[width=1\textwidth, height=1.5\textwidth]{images/diag_act_actualizar_recurso}
+\end{figure}
+
+%%%%%%%%%%%%%%%% Borrar recurso
+\pagebreak
+\begin{figure}[h]
+\centering
+\caption{Diagrama de actividad \textbf{Borrar recurso}}\label{fig:priorReq}
+\includegraphics[width=1\textwidth, height=1.5\textwidth]{images/diag_act_borrar_recurso}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%% Dar de Alta usuario
+\pagebreak
+\begin{figure}[h]
+\centering
+\caption{Diagrama de actividad \textbf{Dar de Alta usuario}}
+\label{fig:priorReq}
+\includegraphics[width=1.2\textwidth, height=1.5\textwidth]{images/diag_act_alta_usuario}
+\end{figure}
+
+%%%%%%%%%%%%%%%%% Actualizar usuario
+\pagebreak
+\begin{figure}[h]
+\centering
+\caption{Diagrama de actividad \textbf{Actualizar usuario}}\label{fig:priorReq}
+\includegraphics[width=1\textwidth, height=1.5\textwidth]{images/diag_act_actualizar_usuario}
+\end{figure}
+
+%%%%%%%%%%%%%%%% Borrar usuario
+\pagebreak
+\begin{figure}[h]
+\centering
+\caption{Diagrama de actividad \textbf{Borrar usuario}}\label{fig:priorReq}
+\includegraphics[width=1\textwidth, height=1.5\textwidth]{images/diag_act_borrar_usuario}
+\end{figure}

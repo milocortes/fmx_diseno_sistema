@@ -1,0 +1,125 @@
+\documentclass[a4paper]{report}
+
+%%%%%%% Portada del documento
+%%%%%%% Definimos el español como idioma
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+%%%%%%% Para definir los colores en RGB
+\usepackage[dvipsnames]{xcolor}
+%%%%%%% Para modificar los márgenes
+\usepackage[margin = 1.5in]{geometry}
+\usepackage[usegeometry]{typearea}% before geometry!
+
+\usepackage{geometry}
+%%%%%%% Páginas horizontales
+\usepackage{pdflscape}
+%%%%%%% Definimos los colores que usaremos en la portada
+\definecolor{mygray}{RGB}{243,240,240}
+\definecolor{myblue}{RGB}{6,97,165}
+\definecolor{myotroazul}{RGB}{79,129,189}
+
+%%%%%%% Para cambiar el color de las líneas de las tablas
+\usepackage{colortbl}
+\arrayrulecolor{myotroazul}
+%%%%%%% Personalizamos el nombre de las secciones
+\definecolor{RoyalRed}{RGB}{157,16, 45}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalsize \huge  \color{black}}%
+  {\flushright\normalsize \color{RoyalRed}%
+   \MakeUppercase{\chaptertitlename}\hspace{1ex}%
+   {\fontfamily{mdugm}\fontsize{60}{60}\selectfont\thechapter}}%
+  {15 pt}%
+  {\bfseries\Huge}%
+
+%% Para incluir longtables
+\usepackage{longtable}
+%% Para incluir item en las celdas de la tabla
+\usepackage{booktabs}
+\newcommand{\tabitem}{~~\llap{\hspace{2mm}}~~}
+%% Para insertar figuras
+\usepackage{graphicx}
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE,RO]{\documentnumber~Rev.~\currentrevision}
+\fancyhead[RE,RO]{Versión.~\currentrevision}
+
+\fancyhead[LE,LO]{\leftmark \\ Sistema de Gestión de POETY}
+
+\fancyfoot[LE,CO]{\thepage}
+
+\lfoot{\includegraphics[width=4cm]{images/lancis_logo}}
+
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
+
+\def \currentrevision{0.1}
+%%\def \documentnumber{ME-MAN-001}
+\newcommand*{\useportrait}{%
+  \clearpage
+  \KOMAoptions{paper=portrait,DIV=current}%switch to portrait
+  \newgeometry{% geometry settings for portrait
+    left=0.5in, right=0.5in, top=0.6in, bottom=1.25in,headheight=23pt,includehead
+  }%
+  \fancyhfoffset{0pt}% <- recalculate head and foot width for fancyhdr
+}
+\newcommand*{\uselandscape}{%
+  \clearpage
+  \KOMAoptions{paper=landscape,DIV=current}%switch to landscape
+  \newgeometry{% geometry settings for landscap
+    left=0.5in, right=0.5in, top=0.6in, bottom=1.25in,headheight=23pt,includehead
+  }
+  \fancyhfoffset{0pt}% recalculate head and foot width for fancyhdr
+}
+
+\usepackage{color}   %May be necessary if you want to color links
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=false, %set true if you want colored links
+    linktoc=all,
+}
+
+
+\begin{document}
+
+\sffamily
+
+\input{Portada}
+
+
+\tableofcontents
+\listoffigures
+\listoftables
+\pagebreak
+
+\chapter*{Introducción}
+\input{secciones/Resumen}
+\label{chap:resumen}
+
+\chapter{Especificación de Requerimientos}
+\input{secciones/EspReque_py}
+\label{chap:espreque}
+
+\chapter{Arquitectura del sistema}
+\label{chap:arqsis}
+
+
+\begin{figure}
+   \noindent\makebox[\textwidth]{%
+   \includegraphics[width=1.1\textwidth]{images/componentes_software}}
+   \caption{Componentes de software}\label{fig:componentes}
+\end{figure}
+
+En cuanto a los componentes de software se propone utilizar una serie de proyectos de código abierto que permitan el buen funcionamiento de la plataforma así como su fácil actualización. Ya que estos proyectos cuentan con comunidades grandes y activas en su desarrollo, por lo que se tienen actualizaciones frecuentes que apoyan el desarrollo de nuevas tecnologías, así como la incorporación de capas más seguras, que en caso de ser necesarias serán fáciles de aplicar.
+\\
+\\
+Dado que durante el proceso de actualización del POETY se utilizará GRASS como sistema de información geográfica proponemos utilizar la combinación de GRASS con Postgres-PostGIS para la base de datos espacial. Postgres es un manejador de bases de datos con capacidades espaciales en su módulo PostGIS.  Adicionalmente proponemos utilizar el manejador de metadatos Geonetwork que nos permitirá ser transparentes en el manejo de todas las capas de información geográfica, los insumos que se usaron para crearlas y el procedimiento que se aplicó.
+\\
+\\
+Para la lógica del sistema proponemos Django, un marco de desarrollo web de código abierto, escrito en Python, que respeta el patrón de diseño conocido como MVC (Modelo–Vista–Controlador). Django es un proyecto que tiene una gran comunidad de desarrollo por lo que las actualizaciones al sistema en caso de ser necesarias serán fáciles de aplicar.  Como servidor http proponemos utilizar Apache, Apache es un proyecto de código abierto muy consolidado, la primer versión se liberó en 1995, hace 25 años y es mantenido por desarrolladores alrededor de todo el mundo. Finalmente para desplegar mapas y gráficas proponemos el uso de d3 y openlayers que son dos bibliotecas de código abierto programadas un JavaScript enfocadas en crear visualizaciones dinámicas con mapas y gráficas.
+
+
+
+\end{document}
