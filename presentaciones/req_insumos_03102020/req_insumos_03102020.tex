@@ -1,0 +1,181 @@
+\documentclass[a4paper]{report}
+
+%%%%%%% Portada del documento
+%%%%%%% Definimos el español como idioma
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+%%%%%%% Para definir los colores en RGB
+\usepackage[dvipsnames]{xcolor}
+%%%%%%% Para modificar los márgenes
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=10mm,
+ top=10mm,
+ }
+
+\usepackage{geometry}
+%%%%%%% Páginas horizontales
+\usepackage{pdflscape}
+%%%%%%% Definimos los colores que usaremos en la portada
+\definecolor{mygray}{RGB}{243,240,240}
+\definecolor{myblue}{RGB}{6,97,165}
+\definecolor{myotroazul}{RGB}{79,129,189}
+\definecolor{myamarillo}{RGB}{255,215,0}
+
+%%%%%%% Para cambiar el color de las líneas de las tablas
+\usepackage{colortbl}
+\arrayrulecolor{myotroazul}
+%%%%%%% Personalizamos el nombre de las secciones
+\definecolor{RoyalRed}{RGB}{157,16, 45}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalsize \huge  \color{black}}%
+  {\flushright\normalsize \color{RoyalRed}%
+   \MakeUppercase{\chaptertitlename}\hspace{1ex}%
+   {\fontfamily{mdugm}\fontsize{60}{60}\selectfont\thechapter}}%
+  {15 pt}%
+  {\bfseries\Huge}%
+
+%% Para incluir longtables
+\usepackage{longtable}
+%% Para incluir item en las celdas de la tabla
+\usepackage{booktabs}
+\newcommand{\tabitem}{~~\llap{\hspace{2mm}}~~}
+%% Para insertar figuras
+\usepackage{graphicx}
+
+
+\def \currentrevision{0.1}
+%%\def \documentnumber{ME-MAN-001}
+\newcommand*{\useportrait}{%
+  \clearpage
+  \KOMAoptions{paper=portrait,DIV=current}%switch to portrait
+  \newgeometry{% geometry settings for portrait
+    left=0.5in, right=0.5in, top=0.6in, bottom=1.25in,headheight=23pt,includehead
+  }%
+  \fancyhfoffset{0pt}% <- recalculate head and foot width for fancyhdr
+}
+\newcommand*{\uselandscape}{%
+  \clearpage
+  \KOMAoptions{paper=landscape,DIV=current}%switch to landscape
+  \newgeometry{% geometry settings for landscap
+    left=0.5in, right=0.5in, top=0.6in, bottom=1.25in,headheight=23pt,includehead
+  }
+  \fancyhfoffset{0pt}% recalculate head and foot width for fancyhdr
+}
+
+\usepackage{color}   %May be necessary if you want to color links
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=false, %set true if you want colored links
+    linktoc=all,
+}
+
+
+\begin{document}
+
+\sffamily
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% FASES ESTUDIO TÉCNICO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begingroup
+\renewcommand\arraystretch{1}
+\begin{longtable}{p{4cm} p{7cm} p{.5cm} p{.5cm} p{.5cm} p{0.8cm} p{0.8cm} p{0.8cm}p{0.8cm}}
+\\[-1.8ex]\hline
+\endhead
+ && \multicolumn{3}{c}{\textcolor{myotroazul}{\textbf{Permiso}}} & \multicolumn{4}{c}{\textcolor{myotroazul}{\textbf{Etapas Estudio Técnico}}} \\
+ \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Módulo}}} & {\textcolor{myotroazul}{\textbf{Casos de Uso}}}& {\textcolor{myotroazul}{\textbf{UI}}$^a$} & {\textcolor{myotroazul}{\textbf{UE}}$^b$} & {\textcolor{myotroazul}{\textbf{A}}$^c$} &
+ {\textcolor{myotroazul}{\textbf{CAR}}$^d$} & {\textcolor{myotroazul}{\textbf{DIAG}}$^e$} & {\textcolor{myotroazul}{\textbf{PRON}}$^f$} & {\textcolor{myotroazul}{\textbf{PROP}}$^g$} \\
+\hline \\[-1ex]
+
+& Consultar fichas de UGAs & \cellcolor{myotroazul}& \cellcolor{myotroazul} & \cellcolor{myotroazul} & && &\cellcolor{myamarillo} \\
+
+ & Descargar ficha de UGA & \cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} &&&&\cellcolor{myamarillo}\\
+
+ & Consultar capas de insumo para el ordenamiento &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul}&\cellcolor{myamarillo}&& &\\
+
+ & Consultar mapas de aptitud &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} &&\cellcolor{myamarillo}&&\\
+
+ & Descargar capas &\cellcolor{myotroazul} &\cellcolor{myotroazul} & \cellcolor{myotroazul} &\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}\\
+
+ & Consultar mapas de UGAs & \cellcolor{myotroazul}&\cellcolor{myotroazul} & \cellcolor{myotroazul} &&&&\cellcolor{myamarillo}\\
+
+& Consultar documentos relacionados con la formulación del (POETY, POETCY, o POEL) &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} & \cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo} \\
+
+Consultas y descargas & Consultar documentos del (POETY, POETCY, o POEL) por búsqueda & \cellcolor{myotroazul}&\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}\\
+
+ & Consultar documentos del (POETY, POETCY, o POEL) por orden cronológico & \cellcolor{myotroazul}&\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}\\
+
+ & Consultar documentos del (POETY, POETCY, o POEL) por tipo &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}\\
+
+ & Descargar documento &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}\\
+
+ & Consultar criterios de regulación por polígono &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} &&&&\cellcolor{myamarillo}\\
+
+ & Descargar criterios de regulación por polígono &\cellcolor{myotroazul} &\cellcolor{myotroazul} &\cellcolor{myotroazul} &&&&\cellcolor{myamarillo}\\
+
+ & Descargar criterios de regulación por UGA & \cellcolor{myotroazul}&\cellcolor{myotroazul} &\cellcolor{myotroazul} &&&&\cellcolor{myamarillo}\\
+
+ & Consultar indicadores del (POETY, POETCY, o POEL) &\cellcolor{myotroazul} &\cellcolor{myotroazul} & \cellcolor{myotroazul}  &&&&\cellcolor{myamarillo}\\
+\hline
+
+ & Dar de alta documentos (fichas, u otros) &\cellcolor{myotroazul}  & &\cellcolor{myotroazul} &\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}\\
+
+ & Dar de alta capas & \cellcolor{myotroazul} & &\cellcolor{myotroazul} &\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}\\
+
+ & Actualizar documentos (fichas, u otros) &\cellcolor{myotroazul}  & &\cellcolor{myotroazul} &\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}\\
+
+& Actualizar capas &\cellcolor{myotroazul} & & \cellcolor{myotroazul} &\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}\\
+
+Actualización de recursos & Borrar documentos (fichas, u otros) &\cellcolor{myotroazul} & &\cellcolor{myotroazul} &\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}\\
+
+ & Borrar capas &\cellcolor{myotroazul} & & \cellcolor{myotroazul} &\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}&\cellcolor{myamarillo}\\
+
+ & Dar de alta recursos de monitoreo &\cellcolor{myotroazul} & &\cellcolor{myotroazul} &&&&\cellcolor{myamarillo}\\
+
+ & Actualizar recursos de monitoreo &\cellcolor{myotroazul} & & \cellcolor{myotroazul} &&&&\cellcolor{myamarillo}\\
+
+ & Borrar recursos de monitoreo &\cellcolor{myotroazul} & & \cellcolor{myotroazul} &&&&\cellcolor{myamarillo}\\
+ & Consultar historial de consultas &\cellcolor{myotroazul} & & \cellcolor{myotroazul} &&&&\cellcolor{myamarillo}\\
+ & Generar PDF de consulta &\cellcolor{myotroazul} & & \cellcolor{myotroazul} &&&&\cellcolor{myamarillo}\\
+\hline
+ &
+Obtener un informe sobre los criterios de regulación y los impactos acumulados & \cellcolor{myotroazul}& & \cellcolor{myotroazul} &&&&\cellcolor{myamarillo}\\
+
+Automatización de reportes & Dar de alta dictamen de un proyecto &\cellcolor{myotroazul} & & \cellcolor{myotroazul} &&&&\\
+
+  & Modificar los datos de un proyecto & \cellcolor{myotroazul}& &  \cellcolor{myotroazul} &&&&\\
+
+ & Borrar proyectos en la base de datos de proyectos &\cellcolor{myotroazul} & & \cellcolor{myotroazul} &&&&\\
+\hline
+ & Dar de alta usuario interno de SDS & & &  \cellcolor{myotroazul} &&&&\\
+
+ & Dar de baja usuario interno de SDS  &  & & \cellcolor{myotroazul} &&&&\\
+
+ & Modificar datos de usuarios internos de SDS & & & \cellcolor{myotroazul} &&&&\\
+
+Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul} &&&&\\
+
+ & Autenticar usuario & & & \cellcolor{myotroazul} &&&&\\
+
+ & Dar de alta un ordenamiento & & & \cellcolor{myotroazul} &&&&\\
+
+ & Borrar un ordenamiento & & & \cellcolor{myotroazul} &&&&\\
+
+ & Modificar datos generales de un ordenamiento & & & \cellcolor{myotroazul} &&&&\\
+\hline
+\multicolumn{7}{l}{\small{$^a$ Usuario Interno, $^b$ Usuario Externo, $^c$ Administrador,$^d$ Caracterización,$^e$ Diagnóstico, $^f$ Pronóstico, $^g$ Propuesta}} &&& &\\
+
+  \\
+\end{longtable}
+\endgroup
+\pagebreak
+\restoregeometry
+
+\end{document}
