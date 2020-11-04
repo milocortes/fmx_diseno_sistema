@@ -160,7 +160,6 @@ Actualización de recursos & Borrar documentos (fichas, u otros) &\cellcolor{myo
 
  & Borrar recursos de monitoreo &\cellcolor{myotroazul} & & \cellcolor{myotroazul}\\
  & Consultar historial de consultas &\cellcolor{myotroazul}  &  &\cellcolor{myotroazul} \\
- & Generar PDF de consulta & \cellcolor{myotroazul} &  & \cellcolor{myotroazul}\\
 \hline
  &
 Obtener un informe sobre los criterios de regulación y los impactos acumulados & \cellcolor{myotroazul}& & \cellcolor{myotroazul}\\
@@ -2698,95 +2697,31 @@ El usuario modifica los datos generales de un ordenamiento \\ \\
 
 \\
 \hspace{.2cm}Breve descripción & 
-El usuario modifica los datos generales de un ordenamiento \\ \\
+El usuario consulta el historial de consultas \\ \\
 
 \hspace{.2cm}Pre-condiciones & \textbf{Del proceso}: \par\vspace{.1cm} Los usuarios deben estar registrados en el sistema
- \par\vspace{.2cm} \textbf{Del sistema} \par\vspace{.1cm} El ordenamiento existe y el usuario tiene permisos apropiados para modificarlo \\ \\
+ \par\vspace{.2cm} \textbf{Del sistema} \par\vspace{.1cm} Ya se han realizado consultas al sistema y el usuario tiene permisos apropiados para visualizarlas \\ \\
 
 \hspace{.2cm}Flujo principal &
 
  1. El usuario se autentifica (CU33). \par\vspace{.1cm}
 
- 2. El usuario entra al menu ordenamientos \par\vspace{.1cm}
+ 2. El usuario selecciona el ordenamiento deseado (POETY,POETCY, o POEL) \par\vspace{.1cm}
 
- 3. El usuario selecciona la opción editar \par\vspace{.1cm}
+ 3. El usuario se dirige al apartado de “Consultar historial de consultas”.                             \par\vspace{.1cm}
 
- 4. El ususario selecciona el ordenamiento \par\vspace{.1cm}
+ 4. El sistema despliega una lista de consultas por orden Cronológico. \par\vspace{.1cm}
 
- 5. El usuario modifica alguno de los datos generales del ordenamiento \par\vspace{.1cm}
+ 5. El usuario selecciona una consulta. \par\vspace{.1cm}
 
- 6. El usuario guarda los cambios.  \par\vspace{.1cm}
+ 6. El sistema genera el archivo PDF de dicha consulta. (A2) \par\vspace{.1cm}
 
 \\
 
 \hspace{.2cm}Flujos alternos & 
 \par (A1) Las credenciales proporcionadas son incorrectas. Se informa al usuario y se le solicitan nuevamente sus credenciales.
 
-
-
-\\
-
-\hspace{.2cm}Flujos de excepción & 
-
-\\%%%<---- Este salto de linea faltaba
-
-\hspace{.2cm}Post-condiciones & 
-\\
-\hline
-
- \\
-\end{longtable}
-\endgroup
-
-
-\pagebreak
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% CU: Generar PDF de consulta
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begingroup
-\renewcommand\arraystretch{1.3}
-\begin{longtable}{@{\extracolsep{8pt}}l p{8.5cm}}
-\caption{Caso de uso: Generar PDF de consulta }\label{item: generar_pdf_de_consulta }\\
-\\[-1.8ex]
-\hline
-  \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
-\hline \\[-1ex]
-\hspace{.2cm}Caso de uso (CU) & Generar PDF de consulta \\ \\
-\hspace{.2cm}Id del CU &  37 \\ \\
-\hspace{.2cm}Actores participantes & 
-\par - Administrador
-
-\par - Usuario Interno de la SDS
-
-\\
-\hspace{.2cm}Breve descripción & 
-El usuario modifica los datos generales de un ordenamiento \\ \\
-
-\hspace{.2cm}Pre-condiciones & \textbf{Del proceso}: \par\vspace{.1cm} Los usuarios deben estar registrados en el sistema
- \par\vspace{.2cm} \textbf{Del sistema} \par\vspace{.1cm} El ordenamiento existe y el usuario tiene permisos apropiados para modificarlo \\ \\
-
-\hspace{.2cm}Flujo principal &
-
- 1. El usuario se autentifica (CU33). \par\vspace{.1cm}
-
- 2. El usuario entra al menu ordenamientos \par\vspace{.1cm}
-
- 3. El usuario selecciona la opción editar \par\vspace{.1cm}
-
- 4. El ususario selecciona el ordenamiento \par\vspace{.1cm}
-
- 5. El usuario modifica alguno de los datos generales del ordenamiento \par\vspace{.1cm}
-
- 6. El usuario guarda los cambios.  \par\vspace{.1cm}
-
-\\
-
-\hspace{.2cm}Flujos alternos & 
-\par (A1) Las credenciales proporcionadas son incorrectas. Se informa al usuario y se le solicitan nuevamente sus credenciales.
+\par (A2) El usuario solicita la descarga del PDF
 
 
 

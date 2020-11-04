@@ -1,4 +1,4 @@
-\select@language {spanish}
+\babel@toc {spanish}{}
 \contentsline {chapter}{\numberline {1}Especificaci\IeC {\'o}n de Requerimientos}{6}{chapter.1}
 \contentsline {section}{\numberline {1.1}Alcances del Sistema}{6}{section.1.1}
 \contentsline {subsection}{\numberline {1.1.1}Objetivos Generales del Sistema}{6}{subsection.1.1.1}
@@ -9,6 +9,6 @@
 \contentsline {subsection}{\numberline {1.2.1}Priorizaci\IeC {\'o}n de Requerimientos}{8}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}Diagrama de Casos de Uso}{10}{subsection.1.2.2}
 \contentsline {subsection}{\numberline {1.2.3}Descripci\IeC {\'o}n de M\IeC {\'o}dulos y Casos de Uso}{12}{subsection.1.2.3}
-\contentsline {subsection}{\numberline {1.2.4}Casos de Uso}{14}{subsection.1.2.4}
-\contentsline {subsection}{\numberline {1.2.5}Diagramas de actividad}{54}{subsection.1.2.5}
-\contentsline {chapter}{\numberline {2}Arquitectura del sistema}{64}{chapter.2}
+\contentsline {subsection}{\numberline {1.2.4}Casos de Uso}{13}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.5}Diagramas de actividad}{52}{subsection.1.2.5}
+\contentsline {chapter}{\numberline {2}Arquitectura del sistema}{62}{chapter.2}
