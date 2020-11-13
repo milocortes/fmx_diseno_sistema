@@ -1,0 +1,37 @@
+Consultar fichas de UGAs
+Descargar ficha de UGA
+Consultar capas de insumo para el ordenamiento
+Consultar mapas de aptitud
+Descargar capas
+Consultar mapas de UGAs
+Consultar documento relacionado con la formulación del (POETY, POETCY, o POEL)
+Consultar documento del (POETY, POETCY, o POEL) por búsqueda
+Consultar documento del (POETY, POETCY, o POEL) por orden cronológico
+Consultar documento del (POETY, POETCY, o POEL) por tipo
+Descargar documento
+Consultar criterios de regulación por polígono
+Descargar criterios de regulación por polígono
+Descargar criterios de regulación por UGA
+Consultar indicadores del (POETY, POETCY, o POEL)
+Dar de alta documentos (fichas, u otros)
+Actualizar documentos (fichas, u otros)
+Borrar documentos (fichas, u otros)
+Dar de alta capas
+Actualizar capas
+Borrar capas
+Dar de alta recursos de monitoreo
+Actualizar recursos de monitoreo
+Borrar recursos de monitoreo
+Obtener un informe sobre los criterios de regulación y los impactos acumulados
+Dar de alta dictamen de un proyecto
+Actualizar datos de un proyecto
+Borrar proyectos en la base de datos de proyectos
+Dar de alta Usuario interno
+Dar de baja Usuario interno
+Modificar datos de usuarios internos de SDS
+Validar usuario
+Autenticar usuario
+Dar de alta un ordenamiento
+Borrar un ordenamiento
+Modificar datos generales de un ordenamiento
+Consultar historial de consultas

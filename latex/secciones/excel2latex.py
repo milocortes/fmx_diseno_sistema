@@ -11,22 +11,28 @@ loc = "casos_de_uso_fomix.xlsx"
 wb = xlrd.open_workbook(loc)
 casos_uso = []
 
+with  open("cu_texto.txt", "r") as fd:
+      cu_texto = fd.read().splitlines()
+fd.close()
+
 for shidx in range(1, wb.nsheets):
     sheet = wb.sheet_by_index(shidx)
     nombre = sheet.cell_value(0, 1)
-    label = slugify(nombre).replace("-","_")
-    id = int(sheet.cell_value(1, 1))
-    actores = sheet.cell_value(4, 1).splitlines()
-    descripcion = sheet.cell_value(7, 1)
-    precondiciones = sheet.cell_value(10, 1)
-    pre_proceso = precondiciones.split("Del proceso")[1].split("Del sistema")[0].strip()
-    pre_sistema = precondiciones.split("Del sistema")[1].strip()
-    flujo_lines = sheet.cell_value(13, 1).splitlines()
-    flujos_alternos =  sheet.cell_value(16, 1).splitlines()
-    flujos_excepcion = sheet.cell_value(19, 1).splitlines()
-    post_condiciones = sheet.cell_value(22, 1)
+    if nombre in cu_texto:
 
-    casos_uso.append({"nombre": nombre,
+        label = slugify(nombre).replace("-","_")
+        id = int(sheet.cell_value(1, 1))
+        actores = sheet.cell_value(4, 1).splitlines()
+        descripcion = sheet.cell_value(7, 1)
+        precondiciones = sheet.cell_value(10, 1)
+        pre_proceso = precondiciones.split("Del proceso")[1].split("Del sistema")[0].strip()
+        pre_sistema = precondiciones.split("Del sistema")[1].strip()
+        flujo_lines = sheet.cell_value(13, 1).splitlines()
+        flujos_alternos =  sheet.cell_value(16, 1).splitlines()
+        flujos_excepcion = sheet.cell_value(19, 1).splitlines()
+        post_condiciones = sheet.cell_value(22, 1)
+
+        casos_uso.append({"nombre": nombre,
                       "label": label,
                       "id": id,
                       "actores": actores,

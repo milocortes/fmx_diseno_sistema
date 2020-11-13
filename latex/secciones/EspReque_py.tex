@@ -141,34 +141,20 @@ Consultas y descargas & Consultar documentos del (POETY, POETCY, o POEL) por bú
 
  & Consultar indicadores del (POETY, POETCY, o POEL) &\cellcolor{myotroazul} &\cellcolor{myotroazul} & \cellcolor{myotroazul}  \\
 \hline
-
- & Dar de alta documentos (fichas, u otros) &\cellcolor{myotroazul}  & &\cellcolor{myotroazul} \\
-
- & Dar de alta capas & \cellcolor{myotroazul} & &\cellcolor{myotroazul} \\
-
+  & Dar de alta documentos (fichas, u otros) &\cellcolor{myotroazul}  & &\cellcolor{myotroazul} \\
  & Actualizar documentos (fichas, u otros) &\cellcolor{myotroazul}  & &\cellcolor{myotroazul} \\
 
-& Actualizar capas &\cellcolor{myotroazul} & & \cellcolor{myotroazul}\\
 
 Actualización de recursos & Borrar documentos (fichas, u otros) &\cellcolor{myotroazul} & &\cellcolor{myotroazul} \\
 
- & Borrar capas &\cellcolor{myotroazul} & & \cellcolor{myotroazul}\\
+ & Consultar historial de reportes por polígono &\cellcolor{myotroazul}  &  &\cellcolor{myotroazul} \\
 
- & Dar de alta recursos de monitoreo &\cellcolor{myotroazul} & &\cellcolor{myotroazul} \\
+ & Consultar proyectos en trámite y aprobados por UGA  &\cellcolor{myotroazul}  &  &\cellcolor{myotroazul} \\
 
- & Actualizar recursos de monitoreo &\cellcolor{myotroazul} & & \cellcolor{myotroazul}\\
-
- & Borrar recursos de monitoreo &\cellcolor{myotroazul} & & \cellcolor{myotroazul}\\
- & Consultar historial de consultas &\cellcolor{myotroazul}  &  &\cellcolor{myotroazul} \\
 \hline
- &
+Automatización de reportes &
 Obtener un informe sobre los criterios de regulación y los impactos acumulados & \cellcolor{myotroazul}& & \cellcolor{myotroazul}\\
 
-Automatización de reportes & Dar de alta dictamen de un proyecto &\cellcolor{myotroazul} & & \cellcolor{myotroazul} \\
-
-  & Modificar los datos de un proyecto & \cellcolor{myotroazul}& &  \cellcolor{myotroazul}\\
-
- & Borrar proyectos en la base de datos de proyectos &\cellcolor{myotroazul} & & \cellcolor{myotroazul}\\
 \hline
  & Dar de alta usuario interno de SDS & & &  \cellcolor{myotroazul}\\
 
@@ -198,6 +184,74 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% CU: Consultar proyectos en trámite y aprobados por UGA
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begingroup
+\renewcommand\arraystretch{1.3}
+\begin{longtable}{@{\extracolsep{8pt}}l p{8.5cm}}
+\caption{Caso de uso: Consultar proyectos en trámite y aprobados por UGA }\label{item: consultar_proyectos_en_tramite_y_aprobados_por_uga }\\
+\\[-1.8ex]
+\hline
+  \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
+\hline \\[-1ex]
+\hspace{.2cm}Caso de uso (CU) & Consultar proyectos en trámite y aprobados por UGA \\ \\
+\hspace{.2cm}Id del CU &  20 \\ \\
+\hspace{.2cm}Actores participantes & 
+\par - Administrador
+
+\par - Usuario Interno de la SDS
+
+\\
+\hspace{.2cm}Breve descripción & 
+El usuario consulta el historial de consultas \\ \\
+
+\hspace{.2cm}Pre-condiciones & \textbf{Del proceso}: \par\vspace{.1cm} Los usuarios deben estar registrados en el sistema
+ \par\vspace{.2cm} \textbf{Del sistema} \par\vspace{.1cm} Ya se han realizado consultas al sistema y el usuario tiene permisos apropiados para visualizarlas \\ \\
+
+\hspace{.2cm}Flujo principal &
+
+ 1. El usuario se autentifica (CU33). \par\vspace{.1cm}
+
+ 2. El usuario selecciona el ordenamiento deseado (POETY,POETCY, o POEL) \par\vspace{.1cm}
+
+ 3. El usuario se dirige al apartado de “Consultar historial de consultas”.                             \par\vspace{.1cm}
+
+ 4. El sistema despliega una lista de consultas por orden Cronológico. \par\vspace{.1cm}
+
+ 5. El usuario selecciona una consulta. \par\vspace{.1cm}
+
+ 6. El sistema genera el archivo PDF de dicha consulta. (A2) \par\vspace{.1cm}
+
+\\
+
+\hspace{.2cm}Flujos alternos & 
+\par (A1) Las credenciales proporcionadas son incorrectas. Se informa al usuario y se le solicitan nuevamente sus credenciales.
+
+\par (A2) El usuario solicita la descarga del PDF
+
+
+
+\\
+
+\hspace{.2cm}Flujos de excepción & 
+
+\\%%%<---- Este salto de linea faltaba
+
+\hspace{.2cm}Post-condiciones & 
+\\
+\hline
+
+ \\
+\end{longtable}
+\endgroup
+
+
+\pagebreak
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% CU: Consultar fichas de UGAs
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -211,7 +265,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Consultar fichas de UGAs \\ \\
-\hspace{.2cm}Id del CU &  0 \\ \\
+\hspace{.2cm}Id del CU &  1 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -280,7 +334,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Descargar ficha de UGA \\ \\
-\hspace{.2cm}Id del CU &  1 \\ \\
+\hspace{.2cm}Id del CU &  2 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -343,7 +397,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Consultar capas de insumo para el ordenamiento \\ \\
-\hspace{.2cm}Id del CU &  2 \\ \\
+\hspace{.2cm}Id del CU &  3 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -414,7 +468,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Consultar mapas de aptitud \\ \\
-\hspace{.2cm}Id del CU &  3 \\ \\
+\hspace{.2cm}Id del CU &  4 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -481,7 +535,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Descargar capas \\ \\
-\hspace{.2cm}Id del CU &  4 \\ \\
+\hspace{.2cm}Id del CU &  5 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -548,7 +602,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Consultar mapas de UGAs \\ \\
-\hspace{.2cm}Id del CU &  5 \\ \\
+\hspace{.2cm}Id del CU &  6 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -611,7 +665,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Consultar documento relacionado con la formulación del (POETY, POETCY, o POEL) \\ \\
-\hspace{.2cm}Id del CU &  6 \\ \\
+\hspace{.2cm}Id del CU &  7 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -674,7 +728,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Consultar documento del (POETY, POETCY, o POEL) por búsqueda \\ \\
-\hspace{.2cm}Id del CU &  7 \\ \\
+\hspace{.2cm}Id del CU &  8 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -745,7 +799,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Consultar documento del (POETY, POETCY, o POEL) por orden cronológico \\ \\
-\hspace{.2cm}Id del CU &  8 \\ \\
+\hspace{.2cm}Id del CU &  9 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -814,7 +868,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Consultar documento del (POETY, POETCY, o POEL) por tipo \\ \\
-\hspace{.2cm}Id del CU &  9 \\ \\
+\hspace{.2cm}Id del CU &  10 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -887,7 +941,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Descargar documento \\ \\
-\hspace{.2cm}Id del CU &  10 \\ \\
+\hspace{.2cm}Id del CU &  11 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -960,7 +1014,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Consultar criterios de regulación por polígono \\ \\
-\hspace{.2cm}Id del CU &  11 \\ \\
+\hspace{.2cm}Id del CU &  12 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -1025,7 +1079,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Descargar criterios de regulación por polígono \\ \\
-\hspace{.2cm}Id del CU &  12 \\ \\
+\hspace{.2cm}Id del CU &  13 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -1090,7 +1144,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Descargar criterios de regulación por UGA \\ \\
-\hspace{.2cm}Id del CU &  13 \\ \\
+\hspace{.2cm}Id del CU &  14 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -1157,7 +1211,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Consultar indicadores del (POETY, POETCY, o POEL) \\ \\
-\hspace{.2cm}Id del CU &  14 \\ \\
+\hspace{.2cm}Id del CU &  15 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -1229,7 +1283,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Dar de alta documentos (fichas, u otros) \\ \\
-\hspace{.2cm}Id del CU &  15 \\ \\
+\hspace{.2cm}Id del CU &  16 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par 
 
@@ -1300,7 +1354,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Actualizar documentos (fichas, u otros) \\ \\
-\hspace{.2cm}Id del CU &  16 \\ \\
+\hspace{.2cm}Id del CU &  17 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par 
 
@@ -1369,7 +1423,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Borrar documentos (fichas, u otros) \\ \\
-\hspace{.2cm}Id del CU &  17 \\ \\
+\hspace{.2cm}Id del CU &  18 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par 
 
@@ -1429,425 +1483,6 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% CU: Dar de alta capas
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begingroup
-\renewcommand\arraystretch{1.3}
-\begin{longtable}{@{\extracolsep{8pt}}l p{8.5cm}}
-\caption{Caso de uso: Dar de alta capas }\label{item: dar_de_alta_capas }\\
-\\[-1.8ex]
-\hline
-  \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
-\hline \\[-1ex]
-\hspace{.2cm}Caso de uso (CU) & Dar de alta capas \\ \\
-\hspace{.2cm}Id del CU &  18 \\ \\
-\hspace{.2cm}Actores participantes & 
-\par 
-
-\par - Usuario interno
-
-\\
-\hspace{.2cm}Breve descripción & El usuario sube una capa \\ \\
-
-\hspace{.2cm}Pre-condiciones & \textbf{Del proceso}: \par\vspace{.1cm} El usuario se autentifica y tiene los permisos necesarios
- \par\vspace{.2cm} \textbf{Del sistema} \par\vspace{.1cm} Ninguna \\ \\
-
-\hspace{.2cm}Flujo principal &
-
- 1. El usuario accede a la bitácora del ordenamientos \par\vspace{.1cm}
-
- 2. El usuario se autentifica con nombre de usuario y contraseña \par\vspace{.1cm}
-
- 3. El usuario selcciona el ordenamiento deseado (POETY, POETCY, o POEL) \par\vspace{.1cm}
-
- 4. El usuario selecciona la sección a la que pertenece la capa \par\vspace{.1cm}
-
- 5. El usuario proporciona el titulo de la capa \par\vspace{.1cm}
-
- 6. El usuario proporciona una descripción general de la capa \par\vspace{.1cm}
-
- 7. El usuario adjunta el metadato en formato xml \par\vspace{.1cm}
-
- 8. El usuario adjunta la capa  \par\vspace{.1cm}
-
-\\
-
-\hspace{.2cm}Flujos alternos & 
-\par NA
-
-
-
-\\
-
-\hspace{.2cm}Flujos de excepción & 
-\par\vspace{.1cm} (E1) En caso de error en la autentificación el sistema redirige a la recuperación de contraseña
-
-\par\vspace{.1cm} (E2) El sistema verifica que  la capa y sus metadatos sean válidos, en caso de no serlo manda un mensaje de error
-
-
-\\%%%<---- Este salto de linea faltaba
-
-\hspace{.2cm}Post-condiciones & 
-\\
-\hline
-
- \\
-\end{longtable}
-\endgroup
-
-
-\pagebreak
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% CU: Actualizar capas
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begingroup
-\renewcommand\arraystretch{1.3}
-\begin{longtable}{@{\extracolsep{8pt}}l p{8.5cm}}
-\caption{Caso de uso: Actualizar capas }\label{item: actualizar_capas }\\
-\\[-1.8ex]
-\hline
-  \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
-\hline \\[-1ex]
-\hspace{.2cm}Caso de uso (CU) & Actualizar capas \\ \\
-\hspace{.2cm}Id del CU &  19 \\ \\
-\hspace{.2cm}Actores participantes & 
-\par - Usuario interno
-
-\\
-\hspace{.2cm}Breve descripción & El usuario actualiza una capa \\ \\
-
-\hspace{.2cm}Pre-condiciones & \textbf{Del proceso}: \par\vspace{.1cm} El usuario se autentifica y tiene los permisos necesarios
- \par\vspace{.2cm} \textbf{Del sistema} \par\vspace{.1cm} La capa que se quiere actualizar existe \\ \\
-
-\hspace{.2cm}Flujo principal &
-
- 1. El usuario accede a la bitácora del ordenamientos \par\vspace{.1cm}
-
- 2. El usuario se autentifica con nombre de usuario y contraseña \par\vspace{.1cm}
-
- 3. El usuario selcciona el ordenamiento deseado (POETY, POETCY, o POEL) \par\vspace{.1cm}
-
- 4. El usuario selecciona la sección a la que pertenece la capa \par\vspace{.1cm}
-
- 5. El sistema muestra una lista de las capas \par\vspace{.1cm}
-
- 6. El usuario selecciona la capa \par\vspace{.1cm}
-
- 7. El usuario actuliza el título, la descripción, el metadato o la capa \par\vspace{.1cm}
-
-\\
-
-\hspace{.2cm}Flujos alternos & 
-\par NA
-
-
-
-\\
-
-\hspace{.2cm}Flujos de excepción & 
-\par\vspace{.1cm} (E1) En caso de error en la autentificación el sistema redirige a la recuperación de contraseña
-
-\par\vspace{.1cm} (E2) El sistema verifica que  la capa y sus metadatos sean válidos, en caso de no serlo manda un mensaje de error
-
-
-\\%%%<---- Este salto de linea faltaba
-
-\hspace{.2cm}Post-condiciones & 
-\\
-\hline
-
- \\
-\end{longtable}
-\endgroup
-
-
-\pagebreak
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% CU: Borrar capas
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begingroup
-\renewcommand\arraystretch{1.3}
-\begin{longtable}{@{\extracolsep{8pt}}l p{8.5cm}}
-\caption{Caso de uso: Borrar capas }\label{item: borrar_capas }\\
-\\[-1.8ex]
-\hline
-  \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
-\hline \\[-1ex]
-\hspace{.2cm}Caso de uso (CU) & Borrar capas \\ \\
-\hspace{.2cm}Id del CU &  20 \\ \\
-\hspace{.2cm}Actores participantes & 
-\par 
-
-\par - Usuario interno
-
-\\
-\hspace{.2cm}Breve descripción & El usuario borra una capa \\ \\
-
-\hspace{.2cm}Pre-condiciones & \textbf{Del proceso}: \par\vspace{.1cm} El usuario se autentifica y tiene los permisos necesarios
- \par\vspace{.2cm} \textbf{Del sistema} \par\vspace{.1cm} La capa que se quiere borrar existe \\ \\
-
-\hspace{.2cm}Flujo principal &
-
- 1. El usuario accede a la bitácora del ordenamientos \par\vspace{.1cm}
-
- 2. El usuario se autentifica con nombre de usuario y contraseña \par\vspace{.1cm}
-
- 3. El usuario selcciona el ordenamiento deseado (POETY, POETCY, o POEL) \par\vspace{.1cm}
-
- 4. El usuario selecciona la sección a la que pertenece la capa \par\vspace{.1cm}
-
- 5. El sistema muestra una lista de las capas \par\vspace{.1cm}
-
- 6. El usuario selecciona la capa \par\vspace{.1cm}
-
- 7. El usuario borra la capa  \par\vspace{.1cm}
-
-\\
-
-\hspace{.2cm}Flujos alternos & 
-\par NA
-
-
-
-\\
-
-\hspace{.2cm}Flujos de excepción & 
-\par\vspace{.1cm} (E1) En caso de error en la autentificación el sistema redirige a la recuperación de contraseña
-
-
-\\%%%<---- Este salto de linea faltaba
-
-\hspace{.2cm}Post-condiciones & 
-\\
-\hline
-
- \\
-\end{longtable}
-\endgroup
-
-
-\pagebreak
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% CU: Dar de alta recursos de monitoreo
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begingroup
-\renewcommand\arraystretch{1.3}
-\begin{longtable}{@{\extracolsep{8pt}}l p{8.5cm}}
-\caption{Caso de uso: Dar de alta recursos de monitoreo }\label{item: dar_de_alta_recursos_de_monitoreo }\\
-\\[-1.8ex]
-\hline
-  \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
-\hline \\[-1ex]
-\hspace{.2cm}Caso de uso (CU) & Dar de alta recursos de monitoreo \\ \\
-\hspace{.2cm}Id del CU &  21 \\ \\
-\hspace{.2cm}Actores participantes & 
-\par -Usuario interno
-
-\\
-\hspace{.2cm}Breve descripción & El usuario interno de la SDS incorpora recursos propios del monitoreo \\ \\
-
-\hspace{.2cm}Pre-condiciones & \textbf{Del proceso}: \par\vspace{.1cm} NA
- \par\vspace{.2cm} \textbf{Del sistema} \par\vspace{.1cm} El actor debe estar autenticado como usuario interno de la SDS. \\ \\
-
-\hspace{.2cm}Flujo principal &
-
- 1.- El usuario ingresa sus credenciales de usuario: nombre de usuario y contraseña.(A1) \par\vspace{.1cm}
-
- 2.- El usuario se dirige al apartado de “registrar mediciones”. \par\vspace{.1cm}
-
- 3.- El Sistema muestra una forma de registro de la medición y el usuario la llena. \par\vspace{.1cm}
-
- 4.- El usuario registra los datos de la  medición y elige la opción “Registrar Medición”. \par\vspace{.1cm}
-
- 5.- El Sistema muestra una advertencia de registro de la medición. \par\vspace{.1cm}
-
- 6.- El usuario acepta la advertencia.(A2) \par\vspace{.1cm}
-
- 7.- El sistema registra los datos de la medición.(E1) \par\vspace{.1cm}
-
-\\
-
-\hspace{.2cm}Flujos alternos & 
-\par (A1) En caso de no contar con credenciales, ver caso de uso Dar de alta usuario.
-
-\par (A2) En caso contrario, el usuario sale del proceso.
-
-
-
-\\
-
-\hspace{.2cm}Flujos de excepción & 
-\par\vspace{.1cm} (E1) El sistema no puede acceder a la base de datos. 
-
-
-\\%%%<---- Este salto de linea faltaba
-
-\hspace{.2cm}Post-condiciones & 
-\\
-\hline
-
- \\
-\end{longtable}
-\endgroup
-
-
-\pagebreak
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% CU: Actualizar recursos de monitoreo
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begingroup
-\renewcommand\arraystretch{1.3}
-\begin{longtable}{@{\extracolsep{8pt}}l p{8.5cm}}
-\caption{Caso de uso: Actualizar recursos de monitoreo }\label{item: actualizar_recursos_de_monitoreo }\\
-\\[-1.8ex]
-\hline
-  \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
-\hline \\[-1ex]
-\hspace{.2cm}Caso de uso (CU) & Actualizar recursos de monitoreo \\ \\
-\hspace{.2cm}Id del CU &  22 \\ \\
-\hspace{.2cm}Actores participantes & 
-\par - Usuario interno
-
-\\
-\hspace{.2cm}Breve descripción & El funcionario actualiza un recurso de monitoreo \\ \\
-
-\hspace{.2cm}Pre-condiciones & \textbf{Del proceso}: \par\vspace{.1cm} Debe existir la medición a modificar.
- \par\vspace{.2cm} \textbf{Del sistema} \par\vspace{.1cm} El actor debe estar autenticado como usuario interno de la SDS. \\ \\
-
-\hspace{.2cm}Flujo principal &
-
- 1.- El usuario ingresa sus credenciales de usuario: nombre de usuario y contraseña.(A1) \par\vspace{.1cm}
-
- 2.- El usuario se dirige al apartado de “actualizar recursos”. \par\vspace{.1cm}
-
- 3.- El usuario ingresa el id de la recurso.(E1) \par\vspace{.1cm}
-
- 4.- El Sistema muestra una forma de actualización del recurso y el usuario la llena. \par\vspace{.1cm}
-
- 5.- El Sistema muestra una advertencia de actualización del recurso. \par\vspace{.1cm}
-
- 6.- El usuario acepta la advertencia.(A2) \par\vspace{.1cm}
-
- 7.- El sistema registra los recursos actualizados.(E1) \par\vspace{.1cm}
-
-\\
-
-\hspace{.2cm}Flujos alternos & 
-\par (A1) En caso de no contar con credenciales, ver caso de uso Dar de alta usuario.
-
-\par (A2) En caso contrario, el usuario sale del proceso.
-
-
-
-\\
-
-\hspace{.2cm}Flujos de excepción & 
-\par\vspace{.1cm} (E1) El sistema no puede acceder a la base de datos. 
-
-
-\\%%%<---- Este salto de linea faltaba
-
-\hspace{.2cm}Post-condiciones & 
-\\
-\hline
-
- \\
-\end{longtable}
-\endgroup
-
-
-\pagebreak
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% CU: Borrar recursos de monitoreo
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begingroup
-\renewcommand\arraystretch{1.3}
-\begin{longtable}{@{\extracolsep{8pt}}l p{8.5cm}}
-\caption{Caso de uso: Borrar recursos de monitoreo }\label{item: borrar_recursos_de_monitoreo }\\
-\\[-1.8ex]
-\hline
-  \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
-\hline \\[-1ex]
-\hspace{.2cm}Caso de uso (CU) & Borrar recursos de monitoreo \\ \\
-\hspace{.2cm}Id del CU &  23 \\ \\
-\hspace{.2cm}Actores participantes & 
-\par - Usuario interno
-
-\\
-\hspace{.2cm}Breve descripción & El usuario interno de la SDS elimina un recurso de monitoreo
- \\ \\
-
-\hspace{.2cm}Pre-condiciones & \textbf{Del proceso}: \par\vspace{.1cm} Debe existir la medición a eliminar.
- \par\vspace{.2cm} \textbf{Del sistema} \par\vspace{.1cm} El actor debe estar autenticado como usuario interno de la SDS. \\ \\
-
-\hspace{.2cm}Flujo principal &
-
- 1.- El usuario ingresa sus credenciales de usuario: nombre de usuario y contraseña.(A1) \par\vspace{.1cm}
-
- 2.- El usuario se dirige al apartado de “eliminar recursos de monitoreo”. \par\vspace{.1cm}
-
- 3.- El usuario ingresa el id del recurso a eliminar.(E1) \par\vspace{.1cm}
-
- 4.- El Sistema muestra una advertencia de eliminación del recurso. \par\vspace{.1cm}
-
- 5.- El usuario acepta la advertencia.(A2) \par\vspace{.1cm}
-
- 6.- El sistema elimina el recurso.(E1) \par\vspace{.1cm}
-
-    \par\vspace{.1cm}
-
-\\
-
-\hspace{.2cm}Flujos alternos & 
-\par (A1) En caso de no contar con credenciales, ver caso de uso Dar de alta usuario.
-
-\par (A2) En caso contrario, el usuario sale del proceso.
-
-
-
-\\
-
-\hspace{.2cm}Flujos de excepción & 
-\par\vspace{.1cm} (E1). El sistema no puede acceder a la base de datos. 
-
-
-\\%%%<---- Este salto de linea faltaba
-
-\hspace{.2cm}Post-condiciones & 
-\\
-\hline
-
- \\
-\end{longtable}
-\endgroup
-
-
-\pagebreak
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% CU: Obtener un informe sobre los criterios de regulación y los impactos acumulados
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -1861,7 +1496,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Obtener un informe sobre los criterios de regulación y los impactos acumulados \\ \\
-\hspace{.2cm}Id del CU &  24 \\ \\
+\hspace{.2cm}Id del CU &  21 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario externo
 
@@ -1921,220 +1556,6 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% CU: Dar de alta dictamen de un proyecto
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begingroup
-\renewcommand\arraystretch{1.3}
-\begin{longtable}{@{\extracolsep{8pt}}l p{8.5cm}}
-\caption{Caso de uso: Dar de alta dictamen de un proyecto }\label{item: dar_de_alta_dictamen_de_un_proyecto }\\
-\\[-1.8ex]
-\hline
-  \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
-\hline \\[-1ex]
-\hspace{.2cm}Caso de uso (CU) & Dar de alta dictamen de un proyecto \\ \\
-\hspace{.2cm}Id del CU &  25 \\ \\
-\hspace{.2cm}Actores participantes & 
-\par - Usuario interno
-
-\\
-\hspace{.2cm}Breve descripción & El usuario interno dictamina un proyecto.
- \\ \\
-
-\hspace{.2cm}Pre-condiciones & \textbf{Del proceso}: \par\vspace{.1cm} Debe existir el proyecto a dictaminar.
- \par\vspace{.2cm} \textbf{Del sistema} \par\vspace{.1cm} El actor debe estar autenticado como usuario interno de la SDS. \\ \\
-
-\hspace{.2cm}Flujo principal &
-
- 1. El usuario ingresa sus credenciales de usuario: nombre de usuario y contraseña.(A1) \par\vspace{.1cm}
-
- 2. El usuario se dirige al apartado de “Dictámenes de proyectos”. \par\vspace{.1cm}
-
- 3. El usuario ingresa el id del proyecto.(E1) \par\vspace{.1cm}
-
- 4. El Sistema muestra una forma de registro sobre el proyecto y el usuario llena el dictamen. \par\vspace{.1cm}
-
- 5. El usuario registra los datos de la  medición y elige la opción “Registrar Dictamen”. \par\vspace{.1cm}
-
- 6. El Sistema muestra una advertencia de registro del  dictamen. \par\vspace{.1cm}
-
- 7. El usuario acepta la advertencia.(A2) \par\vspace{.1cm}
-
- 8. El sistema registra la información del dictamen.(E1) \par\vspace{.1cm}
-
-\\
-
-\hspace{.2cm}Flujos alternos & 
-\par (A1) En caso de no contar con credenciales, ver caso de uso Dar de alta usuario.
-
-\par (A2) En caso contrario, el usuario sale del proceso.
-
-
-
-\\
-
-\hspace{.2cm}Flujos de excepción & 
-\par\vspace{.1cm} (E1). El sistema no puede acceder a la bd. 
-
-
-\\%%%<---- Este salto de linea faltaba
-
-\hspace{.2cm}Post-condiciones & 
-\\
-\hline
-
- \\
-\end{longtable}
-\endgroup
-
-
-\pagebreak
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% CU: Actualizar datos de un proyecto
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begingroup
-\renewcommand\arraystretch{1.3}
-\begin{longtable}{@{\extracolsep{8pt}}l p{8.5cm}}
-\caption{Caso de uso: Actualizar datos de un proyecto }\label{item: actualizar_datos_de_un_proyecto }\\
-\\[-1.8ex]
-\hline
-  \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
-\hline \\[-1ex]
-\hspace{.2cm}Caso de uso (CU) & Actualizar datos de un proyecto \\ \\
-\hspace{.2cm}Id del CU &  26 \\ \\
-\hspace{.2cm}Actores participantes & 
-\par - Usuario interno
-
-\\
-\hspace{.2cm}Breve descripción & El funcionario modifica los datos de un proyecto en el sistema.
- \\ \\
-
-\hspace{.2cm}Pre-condiciones & \textbf{Del proceso}: \par\vspace{.1cm} Debe existir el proyecto a modificar.
- \par\vspace{.2cm} \textbf{Del sistema} \par\vspace{.1cm} El actor debe estar autenticado como usuario interno de la SDS. \\ \\
-
-\hspace{.2cm}Flujo principal &
-
- 1. El usuario ingresa sus credenciales de usuario: nombre de usuario y contraseña.(A1) \par\vspace{.1cm}
-
- 2. El usuario se dirige al apartado de “Proyectos”. \par\vspace{.1cm}
-
- 3. El usuario ingresa el id del proyecto.(E1) \par\vspace{.1cm}
-
- 4. El Sistema muestra una forma de modificación de la información del proyecto y el usuario la llena. \par\vspace{.1cm}
-
- 5. El usuario registra la información nueva del proyecto y elige la opción “Modificar proyecto”. \par\vspace{.1cm}
-
- 6. El Sistema muestra una advertencia de la modificación del proyecto. \par\vspace{.1cm}
-
- 7. El usuario acepta la advertencia.(A2) \par\vspace{.1cm}
-
- 8. El sistema registra la modificación de la información del proyecto.(E1) \par\vspace{.1cm}
-
-\\
-
-\hspace{.2cm}Flujos alternos & 
-\par (A1) En caso de no contar con credenciales, ver caso de uso Dar de alta usuario.
-
-\par (A2) En caso contrario, el usuario sale del proceso.
-
-
-
-\\
-
-\hspace{.2cm}Flujos de excepción & 
-\par\vspace{.1cm} (E1). El sistema no puede acceder a la base de datos. 
-
-
-\\%%%<---- Este salto de linea faltaba
-
-\hspace{.2cm}Post-condiciones & 
-\\
-\hline
-
- \\
-\end{longtable}
-\endgroup
-
-
-\pagebreak
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% CU: Borrar proyectos en la base de datos de proyectos
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begingroup
-\renewcommand\arraystretch{1.3}
-\begin{longtable}{@{\extracolsep{8pt}}l p{8.5cm}}
-\caption{Caso de uso: Borrar proyectos en la base de datos de proyectos }\label{item: borrar_proyectos_en_la_base_de_datos_de_proyectos }\\
-\\[-1.8ex]
-\hline
-  \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
-\hline \\[-1ex]
-\hspace{.2cm}Caso de uso (CU) & Borrar proyectos en la base de datos de proyectos \\ \\
-\hspace{.2cm}Id del CU &  27 \\ \\
-\hspace{.2cm}Actores participantes & 
-\par 
-
-\par - Usuario interno
-
-\\
-\hspace{.2cm}Breve descripción & El funcionario elimina la información de un proyecto.
- \\ \\
-
-\hspace{.2cm}Pre-condiciones & \textbf{Del proceso}: \par\vspace{.1cm} Debe existir el proyecto a eliminar.
- \par\vspace{.2cm} \textbf{Del sistema} \par\vspace{.1cm} El actor debe estar autenticado como usuario interno de la SDS. \\ \\
-
-\hspace{.2cm}Flujo principal &
-
- 1. El usuario ingresa sus credenciales de usuario: nombre de usuario y contraseña.(A1) \par\vspace{.1cm}
-
- 2. El usuario se dirige al apartado de “Proyectos”. \par\vspace{.1cm}
-
- 3. El usuario ingresa el id del proyecto a eliminar.(E1) \par\vspace{.1cm}
-
- 4. El Sistema muestra una advertencia de eliminación del proyecto. \par\vspace{.1cm}
-
- 5. El usuario acepta la advertencia.(A2) \par\vspace{.1cm}
-
- 6. El sistema elimina el proyecto.(E1) \par\vspace{.1cm}
-
-\\
-
-\hspace{.2cm}Flujos alternos & 
-\par (A1) En caso de no contar con credenciales, ver caso de uso Dar de alta usuario.
-
-\par (A2) En caso contrario, el usuario sale del proceso.
-
-
-
-\\
-
-\hspace{.2cm}Flujos de excepción & 
-\par\vspace{.1cm} (E1). El sistema no puede acceder a la base de datos. 
-
-
-\\%%%<---- Este salto de linea faltaba
-
-\hspace{.2cm}Post-condiciones & 
-\\
-\hline
-
- \\
-\end{longtable}
-\endgroup
-
-
-\pagebreak
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% CU: Dar de alta Usuario interno
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -2148,7 +1569,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Dar de alta Usuario interno \\ \\
-\hspace{.2cm}Id del CU &  28 \\ \\
+\hspace{.2cm}Id del CU &  22 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario de interno
 
@@ -2225,7 +1646,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Dar de baja Usuario interno \\ \\
-\hspace{.2cm}Id del CU &  29 \\ \\
+\hspace{.2cm}Id del CU &  23 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Administrador
 
@@ -2294,7 +1715,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Modificar datos de usuarios internos de SDS \\ \\
-\hspace{.2cm}Id del CU &  30 \\ \\
+\hspace{.2cm}Id del CU &  24 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Usuario Interno
 
@@ -2371,7 +1792,7 @@ Módulo de administración & Validar usuraio &  & & \cellcolor{myotroazul}\\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Validar usuario \\ \\
-\hspace{.2cm}Id del CU &  31 \\ \\
+\hspace{.2cm}Id del CU &  25 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Administrador
 
@@ -2435,7 +1856,7 @@ El usuario realiza una solicitud y se valida su identidad \\ \\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Autenticar usuario \\ \\
-\hspace{.2cm}Id del CU &  32 \\ \\
+\hspace{.2cm}Id del CU &  26 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Administrador
 
@@ -2495,7 +1916,7 @@ El usuario ingresa sus credenciales para autenticar su identidad \\ \\
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Dar de alta un ordenamiento \\ \\
-\hspace{.2cm}Id del CU &  33 \\ \\
+\hspace{.2cm}Id del CU &  27 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Administrador
 
@@ -2559,7 +1980,7 @@ El usuario interno o administrador dan de alta un nuevo ordenamiento (POETY, POE
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Borrar un ordenamiento \\ \\
-\hspace{.2cm}Id del CU &  34 \\ \\
+\hspace{.2cm}Id del CU &  28 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Administrador
 
@@ -2623,7 +2044,7 @@ El usuario interno o administrador borran un ordenamiento existente (POETY, POET
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
 \hspace{.2cm}Caso de uso (CU) & Modificar datos generales de un ordenamiento \\ \\
-\hspace{.2cm}Id del CU &  35 \\ \\
+\hspace{.2cm}Id del CU &  29 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Administrador
 
@@ -2676,20 +2097,20 @@ El usuario modifica los datos generales de un ordenamiento \\ \\
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%% CU: Consultar historial de consultas
+%%%%%% CU: Consultar historial de reportes por polígono
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begingroup
 \renewcommand\arraystretch{1.3}
 \begin{longtable}{@{\extracolsep{8pt}}l p{8.5cm}}
-\caption{Caso de uso: Consultar historial de consultas }\label{item: consultar_historial_de_consultas }\\
+\caption{Caso de uso: Consultar historial de reportes por polígono }\label{item: consultar_historial_de_reportes_por_poligono }\\
 \\[-1.8ex]
 \hline
   \multicolumn{1}{c} {\textcolor{myotroazul}{\textbf{Elemento}}}& \multicolumn{1}{c}{\textcolor{myotroazul}{\textbf{ Descripción }}} \\
 \hline \\[-1ex]
-\hspace{.2cm}Caso de uso (CU) & Consultar historial de consultas \\ \\
-\hspace{.2cm}Id del CU &  36 \\ \\
+\hspace{.2cm}Caso de uso (CU) & Consultar historial de reportes por polígono \\ \\
+\hspace{.2cm}Id del CU &  19 \\ \\
 \hspace{.2cm}Actores participantes & 
 \par - Administrador
 
